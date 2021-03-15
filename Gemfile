@@ -12,6 +12,8 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rubocop', '~> 1.4', require: false
 gem 'rubocop-shopify', '~> 1.0.7', require: false
+gem 'octokit', '~> 4.19.0'
+gem 'netrc'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
