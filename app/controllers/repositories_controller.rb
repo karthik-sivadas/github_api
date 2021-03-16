@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 class RepositoriesController < ApplicationController
-  before_action :set_repository, only: [:show, :update, :destroy]
   rescue_from BaseService::GithubError, with: :render_error_response
 
   # GET /repositories
@@ -22,10 +21,12 @@ class RepositoriesController < ApplicationController
 
   # PATCH/PUT /repositories/1
   def update
-    if @repository.update(repository_params)
-      render(json: @repository)
+    repository = UpdateRepositoryService.new(repository_params).execute
+
+    if repository
+      render(json: repository)
     else
-      render(json: @repository.errors, status: :unprocessable_entity)
+      render(json: repository.errors, status: :unprocessable_entity)
     end
   end
 
@@ -36,14 +37,9 @@ class RepositoriesController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_repository
-    @repository = Repository.find(params[:id])
-  end
-
   # Only allow a list of trusted parameters through.
   def repository_params
-    params.permit(:user, :name, :description, :private)
+    params.permit(:user, :name, :description, :private, :new_name, :description)
   end
 
   def render_error_response(error)

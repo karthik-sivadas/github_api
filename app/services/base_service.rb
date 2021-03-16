@@ -10,7 +10,7 @@ class BaseService
 
   def github_client_user
     github_client_user_name = github_client.user.login
-    @github_client_user ||= User.where(name: github_client_user_name).last
+    @github_client_user ||= fetch_user(github_client_user_name)
   end
 
   def fetch_user(user_name)
@@ -36,6 +36,7 @@ class BaseService
     respository_topics = github_client.topics(repository.full_name)[:names]
     Repository.create(github_id: repository.id,
                       node_id: repository.node_id,
+                      description: repository.description,
                       name: repository.name,
                       full_name: repository.full_name,
                       private: repository.private,
