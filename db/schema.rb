@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_03_15_171105) do
     t.string "full_name"
     t.boolean "private"
     t.string "description"
+    t.string "security"
     t.datetime "github_created_at"
     t.datetime "github_updated_at"
     t.string "topics", default: [], array: true

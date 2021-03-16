@@ -2,6 +2,6 @@
 Rails.application.routes.draw do
   resources :repositories, param: :name
   resources :topics, only: [:update], param: :repository
-  resources :security, only: [:create], param: :repository
+  resources :security, param: :repository
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

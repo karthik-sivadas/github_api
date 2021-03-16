@@ -32,7 +32,7 @@ class BaseService
                 total_private_repos: user_details.total_private_repos)
   end
 
-  def create_repository(repository, github_user)
+  def create_repository(repository, github_user, options = {})
     respository_topics = github_client.topics(repository.full_name).names
     Repository.create(github_id: repository.id,
                       node_id: repository.node_id,
@@ -41,6 +41,7 @@ class BaseService
                       full_name: repository.full_name,
                       private: repository.private,
                       user: github_user,
+                      security: options[:security],
                       github_created_at: repository.created_at,
                       github_updated_at: repository.updated_at,
                       topics: respository_topics)

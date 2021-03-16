@@ -8,6 +8,7 @@ class CreateRepositories < ActiveRecord::Migration[6.1]
       t.string(:full_name)
       t.boolean(:private)
       t.string(:description)
+      t.string(:security)
       t.datetime(:github_created_at)
       t.datetime(:github_updated_at)
       t.string(:topics, array: true, default: [])
