@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string(:name, null: false, index: { unique: true })
       t.string(:github_id, null: false, index: { unique: true })
       t.string(:email)
-      t.string(:type)
+      t.string(:user_type)
       t.integer(:public_repos)
       t.integer(:total_private_repos)
 

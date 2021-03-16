@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2021_03_15_171105) do
     t.string "name", null: false
     t.string "github_id", null: false
     t.string "email"
-    t.string "type"
+    t.string "user_type"
     t.integer "public_repos"
     t.integer "total_private_repos"
     t.datetime "created_at", precision: 6, null: false

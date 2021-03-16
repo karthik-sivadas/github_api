@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 class RepositoriesController < ApplicationController
   before_action :set_repository, only: [:show, :update, :destroy]
+  rescue_from BaseService::GithubError, with: :render_error_response
 
   # GET /repositories
   def index
-    @repositories = Repository.all
-
+    @repositories = ListRepositoriesService.new(repository_params).execute
     render(json: @repositories)
   end
 
@@ -48,6 +48,10 @@ class RepositoriesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def repository_params
-    params.fetch(:repository, {})
+    params.permit(:user, :name, :description, :private)
+  end
+
+  def render_error_response(error)
+    render(json: { message: error }, status: :unprocessable_entity)
   end
 end
