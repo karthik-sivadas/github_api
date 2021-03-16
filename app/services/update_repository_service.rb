@@ -20,7 +20,7 @@ class UpdateRepositoryService < BaseService
       repository.update(update_attribute)
       repository
     else
-      repository = create_repository(github_repository, github_client_user)
+      create_repository(github_repository, github_client_user)
     end
   end
 

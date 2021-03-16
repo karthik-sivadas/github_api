@@ -33,7 +33,7 @@ class BaseService
   end
 
   def create_repository(repository, github_user)
-    respository_topics = github_client.topics(repository.full_name)[:names]
+    respository_topics = github_client.topics(repository.full_name).names
     Repository.create(github_id: repository.id,
                       node_id: repository.node_id,
                       description: repository.description,
