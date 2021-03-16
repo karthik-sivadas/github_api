@@ -8,6 +8,11 @@ class BaseService
     @github_client ||= Octokit::Client.new(netrc: true)
   end
 
+  def github_client_user
+    github_client_user_name = github_client.user.login
+    @github_client_user ||= User.where(name: github_client_user_name).last
+  end
+
   def fetch_user(user_name)
     user = User.where(name: user_name).last
     return user if user

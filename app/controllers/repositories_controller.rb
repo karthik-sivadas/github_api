@@ -9,16 +9,11 @@ class RepositoriesController < ApplicationController
     render(json: @repositories)
   end
 
-  # GET /repositories/1
-  def show
-    render(json: @repository)
-  end
-
   # POST /repositories
   def create
-    @repository = Repository.new(repository_params)
+    @repository = CreateGithubRepositoryService.new(repository_params).execute
 
-    if @repository.save
+    if @repository.github_id
       render(json: @repository, status: :created, location: @repository)
     else
       render(json: @repository.errors, status: :unprocessable_entity)
