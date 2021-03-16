@@ -19,7 +19,7 @@ class RepositoriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /repositories/1
+  # PATCH/PUT /repositories/repository_name
   def update
     repository = UpdateRepositoryService.new(repository_params).execute
 
@@ -30,16 +30,16 @@ class RepositoriesController < ApplicationController
     end
   end
 
-  # DELETE /repositories/1
+  # DELETE /repositories/repository_name
   def destroy
-    @repository.destroy
+    render(json: DeleteRepositoryService.new(repository_params).execute)
   end
 
   private
 
   # Only allow a list of trusted parameters through.
   def repository_params
-    params.permit(:user, :name, :description, :private, :new_name, :description)
+    params.permit(:user, :name, :private, :new_name, :description)
   end
 
   def render_error_response(error)
