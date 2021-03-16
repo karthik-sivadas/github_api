@@ -1,24 +1,34 @@
-# README
+# Github API application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application can be used to:
+- List repository of a specific user
+- Create a repository
+- Update a repository name and description
+- Delete a repository
+- Edit Topics of a repository
+- Enable and Disbale security alert of a repository
 
-Things you may want to cover:
+# Installation
 
-* Ruby version
+```
+bundle install
+bundle exec rails db:setup
+```
 
-* System dependencies
+In order for the octokit gem to work you need to setup `~/.netrc` file
 
-* Configuration
+```
+machine api.github.com
+  login github_user_name
+  password github_personal_token
+```
 
-* Database creation
+To start the server
+```
+bundle exec rails s
+```
 
-* Database initialization
+# API Documentation
 
-* How to run the test suite
+[Postman Documentation](https://documenter.getpostman.com/view/5628204/Tz5tWue7)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
