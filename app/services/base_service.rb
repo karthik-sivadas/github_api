@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 class BaseService
-  class GithubError < StandardError; end
-
   private
 
   def github_client

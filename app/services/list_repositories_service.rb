@@ -5,8 +5,6 @@ class ListRepositoriesService < BaseService
   end
 
   def execute
-    raise BaseService::GithubError, @github_user.message unless @github_user.name
-
     repositories = github_client.repositories(@github_user.name)
     validate_and_create_repositories(repositories)
     @github_user.repositories

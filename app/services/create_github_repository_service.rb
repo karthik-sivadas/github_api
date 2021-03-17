@@ -15,7 +15,6 @@ class CreateGithubRepositoryService < BaseService
   def create_repository_on_github
     repository = github_client.create_repository(@repository_name, private: @private,
                                                  description: @repository_description)
-    raise BaseService::GithubError, repository.message unless repository.id
 
     create_repository(repository, github_client_user)
   end

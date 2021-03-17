@@ -7,8 +7,6 @@ class UpdateRepositoryService < BaseService
 
   def execute
     github_repository = github_client.edit_repository("#{github_client_user.name}/#{@original_name}", update_attribute)
-    raise BaseService::GithubError, github_repository.errors.first.message unless github_repository.id
-
     update_or_create_repository(github_repository)
   end
 
