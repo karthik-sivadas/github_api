@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.20.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic a2FydGhpay1zaXZhZGFzOjhkNmU1YzRhZDljNDJhN2ZiYjdiNDYyN2RiYmJkMjNjY2RhZGVkZDU=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 17 Mar 2021 19:23:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"710203ccf543583c41ba1e0188e5ac49f8d0f271c6e085f77aad1a48aebe245b"
+      Last-Modified:
+      - Wed, 17 Mar 2021 15:52:26 GMT
+      X-Oauth-Scopes:
+      - admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key,
+        admin:repo_hook, delete:packages, delete_repo, gist, notifications, repo,
+        user, workflow, write:discussion, write:packages
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4982'
+      X-Ratelimit-Reset:
+      - '1616011709'
+      X-Ratelimit-Used:
+      - '18'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+        X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - CEFA:06DD:3D099F:46A25D:60525727
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"karthik-sivadas","id":6113982,"node_id":"MDQ6VXNlcjYxMTM5ODI=","avatar_url":"https://avatars.githubusercontent.com/u/6113982?v=4","gravatar_id":"","url":"https://api.github.com/users/karthik-sivadas","html_url":"https://github.com/karthik-sivadas","followers_url":"https://api.github.com/users/karthik-sivadas/followers","following_url":"https://api.github.com/users/karthik-sivadas/following{/other_user}","gists_url":"https://api.github.com/users/karthik-sivadas/gists{/gist_id}","starred_url":"https://api.github.com/users/karthik-sivadas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/karthik-sivadas/subscriptions","organizations_url":"https://api.github.com/users/karthik-sivadas/orgs","repos_url":"https://api.github.com/users/karthik-sivadas/repos","events_url":"https://api.github.com/users/karthik-sivadas/events{/privacy}","received_events_url":"https://api.github.com/users/karthik-sivadas/received_events","type":"User","site_admin":false,"name":"Karthik
+        Sivadas","company":null,"blog":"","location":"Bengaluru, India","email":"karthiksivadas@outlook.com","hireable":null,"bio":null,"twitter_username":null,"public_repos":16,"public_gists":0,"followers":0,"following":3,"created_at":"2013-12-05T12:24:44Z","updated_at":"2021-03-17T15:52:26Z","private_gists":0,"total_private_repos":3,"owned_private_repos":2,"disk_usage":1722,"collaborators":1,"two_factor_authentication":true,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}'
+    http_version:
+  recorded_at: Wed, 17 Mar 2021 19:23:19 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/karthik-sivadas
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.20.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic a2FydGhpay1zaXZhZGFzOjhkNmU1YzRhZDljNDJhN2ZiYjdiNDYyN2RiYmJkMjNjY2RhZGVkZDU=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 17 Mar 2021 19:23:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"710203ccf543583c41ba1e0188e5ac49f8d0f271c6e085f77aad1a48aebe245b"
+      Last-Modified:
+      - Wed, 17 Mar 2021 15:52:26 GMT
+      X-Oauth-Scopes:
+      - admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key,
+        admin:repo_hook, delete:packages, delete_repo, gist, notifications, repo,
+        user, workflow, write:discussion, write:packages
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4981'
+      X-Ratelimit-Reset:
+      - '1616011709'
+      X-Ratelimit-Used:
+      - '19'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+        X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - 41AF:0492:3453E9:3B8216:60525728
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"karthik-sivadas","id":6113982,"node_id":"MDQ6VXNlcjYxMTM5ODI=","avatar_url":"https://avatars.githubusercontent.com/u/6113982?v=4","gravatar_id":"","url":"https://api.github.com/users/karthik-sivadas","html_url":"https://github.com/karthik-sivadas","followers_url":"https://api.github.com/users/karthik-sivadas/followers","following_url":"https://api.github.com/users/karthik-sivadas/following{/other_user}","gists_url":"https://api.github.com/users/karthik-sivadas/gists{/gist_id}","starred_url":"https://api.github.com/users/karthik-sivadas/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/karthik-sivadas/subscriptions","organizations_url":"https://api.github.com/users/karthik-sivadas/orgs","repos_url":"https://api.github.com/users/karthik-sivadas/repos","events_url":"https://api.github.com/users/karthik-sivadas/events{/privacy}","received_events_url":"https://api.github.com/users/karthik-sivadas/received_events","type":"User","site_admin":false,"name":"Karthik
+        Sivadas","company":null,"blog":"","location":"Bengaluru, India","email":"karthiksivadas@outlook.com","hireable":null,"bio":null,"twitter_username":null,"public_repos":16,"public_gists":0,"followers":0,"following":3,"created_at":"2013-12-05T12:24:44Z","updated_at":"2021-03-17T15:52:26Z","private_gists":0,"total_private_repos":3,"owned_private_repos":2,"disk_usage":1722,"collaborators":1,"two_factor_authentication":true,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}'
+    http_version:
+  recorded_at: Wed, 17 Mar 2021 19:23:20 GMT
+recorded_with: VCR 5.1.0
